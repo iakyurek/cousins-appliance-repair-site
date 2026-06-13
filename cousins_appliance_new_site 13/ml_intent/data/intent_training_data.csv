@@ -1,0 +1,241 @@
+text,label
+"I need to book a repair appointment",booking_request
+"Can I schedule a technician for tomorrow",booking_request
+"How do I make an appointment online",booking_request
+"I want to set up a service visit",booking_request
+"Can someone come look at my appliance this week",booking_request
+"Do you have any openings today",booking_request
+"I need availability for a washer repair",booking_request
+"Where is the calendar to book service",booking_request
+"I want to reserve a time slot",booking_request
+"Can I use Setmore to schedule",booking_request
+"Please help me book a visit",booking_request
+"I need a technician appointment",booking_request
+"Can you send someone to my house",booking_request
+"I'd like to schedule repair service",booking_request
+"What times are available for repair",booking_request
+"How much does appliance repair cost",pricing_question
+"What is the diagnostic fee",pricing_question
+"Can I get an estimate before booking",pricing_question
+"How much do you charge to come out",pricing_question
+"What is your service call fee",pricing_question
+"Do you have a trip charge",pricing_question
+"How much is a dryer repair",pricing_question
+"Can you give me a quote",pricing_question
+"What would the price be for fixing my fridge",pricing_question
+"Is there a fee for diagnosis",pricing_question
+"Do you charge if I do not repair it",pricing_question
+"How much money should I expect",pricing_question
+"What is the cost for a visit",pricing_question
+"Can I know the repair price",pricing_question
+"Do you give free estimates",pricing_question
+"My washer will not drain",washer_drain_issue
+"The washing machine is full of water",washer_drain_issue
+"Washer stops before draining",washer_drain_issue
+"My washer drain pump sounds bad",washer_drain_issue
+"The washer leaves water in the tub",washer_drain_issue
+"Washing machine won't empty",washer_drain_issue
+"My washer is clogged and not draining",washer_drain_issue
+"The spin cycle ends but water stays inside",washer_drain_issue
+"Washer has standing water after cycle",washer_drain_issue
+"The laundry machine will not pump water out",washer_drain_issue
+"My washer drains very slowly",washer_drain_issue
+"There is water sitting in the washer",washer_drain_issue
+"The washing machine drain hose may be blocked",washer_drain_issue
+"Washer won't finish because it cannot drain",washer_drain_issue
+"My washer keeps saying drain error",washer_drain_issue
+"My washer is leaking water",washer_leak_issue
+"Water is leaking from the washing machine",washer_leak_issue
+"There is a puddle under my washer",washer_leak_issue
+"The washing machine leaks during the cycle",washer_leak_issue
+"My washer hose is dripping",washer_leak_issue
+"Water comes out from the washer door",washer_leak_issue
+"My laundry room floor is wet after washing",washer_leak_issue
+"Washer leaks from underneath",washer_leak_issue
+"My washer seal may be broken",washer_leak_issue
+"The washer is leaking near the front",washer_leak_issue
+"Water drips when the washer fills",washer_leak_issue
+"My washer is spraying water",washer_leak_issue
+"The washing machine leaves water on the floor",washer_leak_issue
+"My washer drain hose leaks",washer_leak_issue
+"Washer leaks only on spin cycle",washer_leak_issue
+"My dryer is not heating",dryer_no_heat
+"Dryer runs but clothes stay wet",dryer_no_heat
+"The dryer has no heat",dryer_no_heat
+"My dryer spins but does not get hot",dryer_no_heat
+"Clothes are taking forever to dry",dryer_no_heat
+"Dryer blows cold air",dryer_no_heat
+"The electric dryer is not warming up",dryer_no_heat
+"Gas dryer tumbles but no heat",dryer_no_heat
+"My dryer is drying too slowly",dryer_no_heat
+"Dryer heat stopped working",dryer_no_heat
+"The dryer does not produce hot air",dryer_no_heat
+"My dryer needs two cycles to dry clothes",dryer_no_heat
+"Dryer has airflow but no heat",dryer_no_heat
+"The dryer igniter might be bad",dryer_no_heat
+"My dryer is warm but not hot enough",dryer_no_heat
+"My dryer is making a loud noise",dryer_noise_issue
+"Dryer squeaks when it runs",dryer_noise_issue
+"The dryer is banging loudly",dryer_noise_issue
+"My dryer sounds like grinding",dryer_noise_issue
+"Dryer drum is making a scraping sound",dryer_noise_issue
+"The dryer makes a thumping noise",dryer_noise_issue
+"My dryer is shaking and noisy",dryer_noise_issue
+"Dryer squealing noise repair",dryer_noise_issue
+"The dryer sounds like a bad bearing",dryer_noise_issue
+"My dryer is rattling",dryer_noise_issue
+"Dryer makes noise only when spinning",dryer_noise_issue
+"The dryer belt might be broken",dryer_noise_issue
+"Dryer drum is not turning smoothly",dryer_noise_issue
+"My dryer sounds awful",dryer_noise_issue
+"The dryer started making a new noise",dryer_noise_issue
+"My refrigerator is not cooling",refrigerator_not_cooling
+"The fridge is warm inside",refrigerator_not_cooling
+"My freezer works but fridge is not cold",refrigerator_not_cooling
+"Food is spoiling in the refrigerator",refrigerator_not_cooling
+"The refrigerator temperature is too high",refrigerator_not_cooling
+"My fridge stopped cooling overnight",refrigerator_not_cooling
+"The refrigerator fan is running but not cold",refrigerator_not_cooling
+"My fridge and freezer are both warm",refrigerator_not_cooling
+"Fridge does not keep food cold",refrigerator_not_cooling
+"My refrigerator compressor might not be working",refrigerator_not_cooling
+"The fridge is barely cooling",refrigerator_not_cooling
+"My refrigerator is blowing warm air",refrigerator_not_cooling
+"The freezer is melting",refrigerator_not_cooling
+"Refrigerator cooling problem",refrigerator_not_cooling
+"My fridge temperature keeps rising",refrigerator_not_cooling
+"My refrigerator is leaking water",refrigerator_leak_issue
+"Water is pooling under the fridge",refrigerator_leak_issue
+"The fridge water dispenser is leaking",refrigerator_leak_issue
+"There is water inside the refrigerator",refrigerator_leak_issue
+"My freezer has frost and water leaking",refrigerator_leak_issue
+"Fridge drain line might be clogged",refrigerator_leak_issue
+"The refrigerator leaks from the back",refrigerator_leak_issue
+"Water drips from the bottom of my fridge",refrigerator_leak_issue
+"My fridge has ice buildup and leaks",refrigerator_leak_issue
+"The refrigerator tray is overflowing",refrigerator_leak_issue
+"Water comes from under my refrigerator",refrigerator_leak_issue
+"My ice maker is leaking",refrigerator_leak_issue
+"Fridge leak repair needed",refrigerator_leak_issue
+"There is a puddle by my fridge",refrigerator_leak_issue
+"Refrigerator drain issue leaking",refrigerator_leak_issue
+"My dishwasher is not cleaning dishes",dishwasher_not_cleaning
+"Dishes are still dirty after the dishwasher runs",dishwasher_not_cleaning
+"Dishwasher leaves food on plates",dishwasher_not_cleaning
+"The dishwasher does not spray water",dishwasher_not_cleaning
+"My dishwasher soap is not dissolving",dishwasher_not_cleaning
+"Dishwasher leaves cloudy glasses",dishwasher_not_cleaning
+"My dishwasher filter may be clogged",dishwasher_not_cleaning
+"The spray arm is not spinning",dishwasher_not_cleaning
+"Dishwasher does not wash well",dishwasher_not_cleaning
+"My dishes come out greasy",dishwasher_not_cleaning
+"Dishwasher detergent stays in the cup",dishwasher_not_cleaning
+"The dishwasher runs but dishes are not clean",dishwasher_not_cleaning
+"My dishwasher has low water pressure",dishwasher_not_cleaning
+"Dishwasher leaves residue",dishwasher_not_cleaning
+"Dishwasher cleaning problem",dishwasher_not_cleaning
+"My dishwasher is not draining",dishwasher_drain_issue
+"There is standing water in the dishwasher",dishwasher_drain_issue
+"Dishwasher has water at the bottom",dishwasher_drain_issue
+"The dishwasher drain hose may be clogged",dishwasher_drain_issue
+"My dishwasher smells and won't drain",dishwasher_drain_issue
+"Dishwasher stops with water inside",dishwasher_drain_issue
+"Dishwasher drain pump problem",dishwasher_drain_issue
+"The dishwasher leaves dirty water",dishwasher_drain_issue
+"My dishwasher drains slowly",dishwasher_drain_issue
+"Dishwasher backs up into the sink",dishwasher_drain_issue
+"Dishwasher water won't empty",dishwasher_drain_issue
+"There is dirty water sitting in my dishwasher",dishwasher_drain_issue
+"Dishwasher drain error",dishwasher_drain_issue
+"The dishwasher is clogged",dishwasher_drain_issue
+"Dishwasher is full of water",dishwasher_drain_issue
+"My oven is not heating",oven_stove_heating_issue
+"The stove burner will not ignite",oven_stove_heating_issue
+"My gas oven won't light",oven_stove_heating_issue
+"Electric stove burner is not working",oven_stove_heating_issue
+"The oven takes too long to preheat",oven_stove_heating_issue
+"My range is not heating properly",oven_stove_heating_issue
+"The oven temperature is wrong",oven_stove_heating_issue
+"Stove clicks but does not light",oven_stove_heating_issue
+"The oven igniter might be bad",oven_stove_heating_issue
+"My oven heats unevenly",oven_stove_heating_issue
+"The burner stays cold",oven_stove_heating_issue
+"My stove top stopped working",oven_stove_heating_issue
+"Oven repair for no heat",oven_stove_heating_issue
+"Range burner issue",oven_stove_heating_issue
+"My oven display works but it will not heat",oven_stove_heating_issue
+"I smell gas near my stove",safety_emergency
+"There are sparks coming from the appliance",safety_emergency
+"My dryer smells like burning",safety_emergency
+"Smoke is coming from my oven",safety_emergency
+"The washer is flooding the floor",safety_emergency
+"There is an electrical burning smell",safety_emergency
+"My appliance is smoking",safety_emergency
+"I hear popping and see sparks",safety_emergency
+"Gas smell from oven what should I do",safety_emergency
+"The dishwasher is flooding my kitchen",safety_emergency
+"My outlet sparked when I plugged in the appliance",safety_emergency
+"The appliance smells like fire",safety_emergency
+"Water is flooding everywhere",safety_emergency
+"The stove smells like gas",safety_emergency
+"There is a dangerous electrical issue",safety_emergency
+"Do you service Milwaukee",service_area_question
+"Are you available in Mequon",service_area_question
+"What areas do you cover",service_area_question
+"Do you come to Wauwatosa",service_area_question
+"Can you repair appliances in Oak Creek",service_area_question
+"Do you serve surrounding areas",service_area_question
+"Is my ZIP code in your service area",service_area_question
+"Do you go outside Milwaukee",service_area_question
+"Can you come to Brookfield",service_area_question
+"Do you service apartments in Mequon",service_area_question
+"Are you near me",service_area_question
+"What cities do you work in",service_area_question
+"Do you serve West Allis",service_area_question
+"Can you come to Shorewood",service_area_question
+"Do you cover the Milwaukee area",service_area_question
+"Hello",general_question
+"Hi I have a question",general_question
+"Can you help me",general_question
+"What appliances do you repair",general_question
+"Tell me about Cousins Appliance Repair",general_question
+"Are your technicians licensed",general_question
+"What services do you offer",general_question
+"Do you fix appliances",general_question
+"I need help with an appliance",general_question
+"Can I talk to someone",general_question
+"Who is Metin",general_question
+"What is your phone number",general_question
+"Do you repair both gas and electric appliances",general_question
+"Can you explain your repair process",general_question
+"What should I include in the booking notes",general_question
+Where are you located,service_area_question
+Where are you located?,service_area_question
+What is your location,service_area_question
+Where is Cousins Appliance Repair located,service_area_question
+Where is your business located,service_area_question
+Where are you based,service_area_question
+Are you located in Milwaukee,service_area_question
+Are you located in Mequon,service_area_question
+What city are you in,service_area_question
+What is your address,service_area_question
+Do you have a shop address,service_area_question
+Are you a mobile appliance repair service,service_area_question
+Is Cousins Appliance Repair near me,service_area_question
+Are you close to Milwaukee,service_area_question
+Do you work near Mequon,service_area_question
+Are your technicians licensed?,business_info_question
+Are the repair technicians certified?,business_info_question
+Are you licensed and insured?,business_info_question
+Who is the founder?,business_info_question
+Who started Cousins Appliance Repair?,business_info_question
+Who owns Cousins Appliance Repair?,business_info_question
+Who runs the company?,business_info_question
+Is Metin the founder?,business_info_question
+Can you tell me about the owner?,business_info_question
+Are your techs qualified?,business_info_question
+Do you use licensed technicians?,business_info_question
+What are your technician credentials?,business_info_question
+Are your appliance repair people trained?,business_info_question
+Who founded this business?,business_info_question
+Can I trust your technicians?,business_info_question

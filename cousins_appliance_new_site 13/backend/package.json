@@ -1,0 +1,17 @@
+{
+  "name": "cousins-appliance-ai-backend",
+  "version": "1.1.0",
+  "description": "OpenAI and scikit-learn intent-classifier backend for Cousins Appliance Repair chatbot.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "openai": "latest"
+  }
+}

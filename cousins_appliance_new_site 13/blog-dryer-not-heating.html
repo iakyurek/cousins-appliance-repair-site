@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cousins Blog shares appliance repair tips for washers, dryers, refrigerators, dishwashers, and preparing for appliance repair visits in the Greater Milwaukee Area." />
+  <title>Why Is My Dryer Not Heating? | Cousins Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Cousins Appliance Repair home">
+      <img src="assets/images/logo-dark.jpg" alt="Cousins Appliance Repair logo" />
+      <span>Cousins Appliance Repair</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html#about">About Us</a>
+      <a href="services.html#services-list">Services</a>
+      <a href="blog.html">Cousins Blog</a>
+      <a href="index.html#work">Past Work</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone-link" href="tel:+14144057621">(414) 405-7621</a>
+      <button class="btn btn-primary open-booking" type="button">Book Appointment</button>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html#about">About Us</a>
+      <a href="services.html#services-list">Services</a>
+      <a href="blog.html">Cousins Blog</a>
+      <a href="index.html#work">Past Work</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+      <button class="btn btn-primary open-booking" type="button">Book Appointment</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero blog-detail-hero section-pad-small">
+      <p class="eyebrow">Dryer Repair</p>
+      <h1>Why Is My Dryer Not Heating?</h1>
+      <p>A dryer that runs without heat can be caused by several common repair issues.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary open-booking" type="button">Book dryer repair</button>
+        <a class="btn btn-secondary" href="blog.html">Back to Blog</a>
+      </div>
+    </section>
+
+    <article class="blog-detail-layout section-pad-small">
+      <div class="blog-detail-image">
+        <img src="assets/images/work-02.jpg" alt="Large lint buildup removed from dryer during repair" />
+        <p>Lint buildup and airflow restrictions can make a dryer run without drying clothes properly.</p>
+      </div>
+      <div class="blog-detail-copy">
+        <span class="blog-category">Dryer Repair</span>
+        <h2>What this usually means</h2>
+            <p>A dryer that turns on but does not heat can quickly turn laundry day into a headache. The appliance may tumble normally, but clothes stay damp after a full cycle or take much longer than usual to dry.</p>
+            <p>Common causes include a blown thermal fuse, faulty heating element, bad thermostat, clogged vent, worn belt, or restricted airflow. Lint buildup is especially important because it can reduce performance and create safety concerns if ignored.</p>
+            <p>If the dryer is gas-powered, heating issues can also involve ignition or gas-related components, which should be handled by a trained professional. Avoid trying to repair gas or electrical components on your own.</p>
+            <p>A technician can inspect the dryer, test the heating system, check airflow, and determine whether the issue needs cleaning, repair, or replacement parts.</p>
+        <div class="card-actions blog-detail-actions">
+          <button class="btn btn-primary open-booking" type="button">Book dryer repair</button>
+          <button class="btn btn-ghost open-chat" type="button" data-message="My dryer is not heating. What could be causing that?">Ask CousinsCare</button>
+        </div>
+      </div>
+    </article>
+
+    <section class="blog-next-section section-pad-small" aria-label="More blog posts">
+      <div class="blog-next-card">
+        <h2>Keep reading appliance tips</h2>
+        <p>Browse the rest of the Cousins Blog or schedule a repair visit if you are ready for a technician to take a look.</p>
+        <div class="card-actions">
+          <a class="btn btn-secondary" href="blog-refrigerator-repair-signs.html">Previous tip</a> <a class="btn btn-secondary" href="blog.html">Back to Cousins Blog</a> <a class="btn btn-secondary" href="blog-dishwasher-not-cleaning.html">Next tip</a>
+          <button class="btn btn-primary open-booking" type="button">Book Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Cousins Appliance Repair</strong>
+      <p>Greater Milwaukee Area</p>
+    </div>
+    <a href="tel:+14144057621">(414) 405-7621</a>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Mobile quick actions">
+    <a href="tel:+14144057621">Call</a>
+    <button class="open-booking" type="button">Book</button>
+    <button class="open-chat" type="button">Chat</button>
+  </div>
+
+  <div class="booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="bookingTitle">
+    <div class="modal-backdrop close-booking"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">Book with Setmore</p>
+          <h2 id="bookingTitle">Choose a repair time</h2>
+        </div>
+        <button class="close-booking modal-close" type="button" aria-label="Close booking popup">×</button>
+      </div>
+      <iframe id="setmoreFrame" title="Cousins Appliance Repair Setmore booking page" loading="lazy"></iframe>
+      <p class="modal-note">If the calendar does not load locally, use the backup link: <a id="bookingBackupLink" href="#" target="_blank" rel="noopener">open booking page</a>.</p>
+    </div>
+  </div>
+
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open CousinsCare chatbot">
+    <img src="assets/images/logo-dark.jpg" alt="" />
+    <span>Ask me anything!</span>
+  </button>
+
+  <aside class="chat-panel" id="chatPanel" aria-hidden="true" aria-label="CousinsCare chatbot">
+    <div class="chat-header">
+      <img src="assets/images/logo-dark.jpg" alt="Cousins logo" />
+      <div>
+        <strong>CousinsCare</strong>
+        <span>AI repair assistant</span>
+      </div>
+      <button id="chatClose" type="button" aria-label="Close chat">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot-message">Hi, I’m CousinsCare. I’m here to help with appliance questions, booking, service areas, and pricing. What’s on your mind today?</div>
+    </div>
+    <div class="quick-prompts" aria-label="Common questions">
+      <button type="button" data-prompt="How much does appliance repair cost?">Pricing</button>
+      <button type="button" data-prompt="Do you repair dryers that are not heating?">Dryer help</button>
+      <button type="button" data-prompt="Can I book an appointment?">Book</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" autocomplete="off" placeholder="Ask about pricing, services, or booking..." />
+      <button type="submit">Send</button>
+    </form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
