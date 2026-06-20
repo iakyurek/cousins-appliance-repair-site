@@ -144,6 +144,45 @@ function detectAction(message) {
   return null;
 }
 
+
+
+function initializeCarousels() {
+  document.querySelectorAll(".carousel-shell").forEach((shell) => {
+    const viewport = shell.querySelector(".carousel-track");
+    const prev = shell.querySelector(".carousel-prev");
+    const next = shell.querySelector(".carousel-next");
+    if (!viewport || !prev || !next) return;
+
+    const getStep = () => {
+      const card = viewport.querySelector(".carousel-card");
+      if (!card) return viewport.clientWidth;
+      const gap = parseFloat(getComputedStyle(viewport).columnGap || getComputedStyle(viewport).gap || "18") || 18;
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    prev.addEventListener("click", () => {
+      viewport.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", () => {
+      viewport.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+  });
+}
+
+function scrollForPrettyPath() {
+  const routeTargets = {
+    "/About-Us": "#about",
+    "/Past-Work": "#work",
+    "/Reviews": "#reviews",
+    "/Contact": "#contact"
+  };
+  const targetId = routeTargets[window.location.pathname];
+  if (targetId) {
+    setTimeout(() => scrollToSection(targetId), 150);
+  }
+}
+
 function localFallbackResponse(message) {
   const m = message.toLowerCase();
   const action = detectAction(message);
@@ -157,7 +196,7 @@ function localFallbackResponse(message) {
 
   if (/(book|appointment|schedule|setmore|calendar|time slot)/.test(m)) {
     return {
-      reply: "Absolutely. You can book directly through our Setmore calendar. Choose the service, pick a time, and leave notes about the appliance problem so the technician can prepare.",
+      reply: "Absolutely. You can book directly through our Setmore calendar. Choose the service, pick a time, and leave notes about the appliance problem. Because booking volume can get high, a technician will call or reach out after booking to confirm the details and make sure we understand the issue before the visit.",
       action: "booking"
     };
   }
@@ -212,9 +251,9 @@ function localFallbackResponse(message) {
     };
   }
 
-  if (/(area|serve|location|located|milwaukee|greenfield|mequon|franklin|oak creek|wauwatosa|west allis|brookfield|shorewood|whitefish bay|glendale|address|near me|what city|what cities|service area|cover)/.test(m)) {
+  if (/(area|serve|location|located|milwaukee|greenfield|mequon|franklin|oak creek|grafton|port washington|cedarburg|wauwatosa|west allis|brookfield|shorewood|whitefish bay|glendale|address|near me|what city|what cities|service area|cover)/.test(m)) {
     return {
-      reply: "Cousins Appliance Repair serves the Greater Milwaukee Area, including Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.",
+      reply: "Cousins Appliance Repair serves the Greater Milwaukee Area, including Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Grafton, Port Washington, Cedarburg, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.",
       action: null
     };
   }
@@ -318,3 +357,7 @@ document.addEventListener("keydown", (event) => {
     closeChat();
   }
 });
+
+
+initializeCarousels();
+scrollForPrettyPath();

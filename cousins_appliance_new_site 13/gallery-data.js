@@ -26,8 +26,8 @@ const GALLERY_ITEMS = [
   },
   {
     "file": "work-06.jpg",
-    "title": "Dishwasher leak diagnosis",
-    "caption": "Foaming and standing water were checked during a dishwasher leak and draining service call."
+    "title": "Oven glass cleaning service",
+    "caption": "Stubborn oil and baked-on residue were scrubbed and cleaned from oven glass."
   },
   {
     "file": "work-07.jpg",
@@ -36,8 +36,8 @@ const GALLERY_ITEMS = [
   },
   {
     "file": "work-08.jpg",
-    "title": "Water line connection repair",
-    "caption": "Water inlet and supply line connection inspected for leaks and proper installation."
+    "title": "Dishwasher valve replacement",
+    "caption": "Dishwasher valve connection inspected and replaced to restore proper water flow."
   },
   {
     "file": "work-09.jpg",
@@ -66,8 +66,8 @@ const GALLERY_ITEMS = [
   },
   {
     "file": "work-14.jpg",
-    "title": "Refrigerator component inspection",
-    "caption": "Interior refrigerator component checked during a cooling and frost buildup diagnosis."
+    "title": "Ice buildup cleaned",
+    "caption": "Ice buildup cleaned from the refrigerator interior during a cooling service."
   },
   {
     "file": "work-15.jpg",
@@ -76,8 +76,8 @@ const GALLERY_ITEMS = [
   },
   {
     "file": "work-16.jpg",
-    "title": "Model number verified",
-    "caption": "Model and serial information captured so the correct appliance parts can be identified."
+    "title": "Washer board correction",
+    "caption": "Washer control board and model information checked during a board correction service."
   },
   {
     "file": "work-17.jpg",

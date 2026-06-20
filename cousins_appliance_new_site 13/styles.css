@@ -1012,3 +1012,117 @@ h3 { font-size: 1.35rem; line-height: 1.15; margin-bottom: 10px; }
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v14 updates: five service cards, past work/blog carousels, favicon-ready layout */
+.five-service-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: 1160px;
+  margin-inline: auto;
+}
+.five-service-grid .service-card {
+  grid-column: span 2;
+}
+.five-service-grid .service-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.five-service-grid .service-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.carousel-shell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(1220px, 100%);
+  margin-inline: auto;
+}
+.carousel-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding: 4px 2px 10px;
+}
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 36px) / 3);
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 2px;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-card {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+.carousel-btn {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background: var(--charcoal);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+}
+.carousel-btn:hover {
+  background: var(--red);
+}
+.work-carousel .gallery-card,
+.blog-carousel .compact-blog-card {
+  height: 100%;
+}
+.blog-carousel .carousel-track {
+  grid-auto-columns: calc((100% - 42px) / 4);
+}
+.blog-carousel .compact-blog-card h3 {
+  min-height: 3.6em;
+}
+.blog-carousel .blog-caption {
+  min-height: 4.2em;
+}
+
+@media (max-width: 1100px) {
+  .blog-carousel .carousel-track,
+  .carousel-track {
+    grid-auto-columns: calc((100% - 18px) / 2);
+  }
+  .five-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .five-service-grid .service-card,
+  .five-service-grid .service-card:nth-child(4),
+  .five-service-grid .service-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .carousel-shell {
+    gap: 8px;
+  }
+  .carousel-btn {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+  .blog-carousel .carousel-track,
+  .carousel-track {
+    grid-auto-columns: 100%;
+  }
+  .five-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
