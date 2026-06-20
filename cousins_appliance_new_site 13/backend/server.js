@@ -26,8 +26,54 @@ app.use(cors({
 }));
 app.use(express.json({ limit: "1mb" }));
 
+const siteRoot = path.join(__dirname, "..");
+
+const legacyRedirects = {
+  "/index.html": "/",
+  "/services.html": "/Services",
+  "/blog.html": "/Cousins-Blog",
+  "/blog-washer-not-draining.html": "/Cousins-Blog/Washer-Not-Draining",
+  "/blog-refrigerator-repair-signs.html": "/Cousins-Blog/Refrigerator-Repair-Signs",
+  "/blog-dryer-not-heating.html": "/Cousins-Blog/Dryer-Not-Heating",
+  "/blog-dishwasher-not-cleaning.html": "/Cousins-Blog/Oven-Glass-Cleaning",
+  "/blog-prepare-repair-visit.html": "/Cousins-Blog/Prepare-Repair-Visit",
+  "/blog-dryer-lint-buildup.html": "/Cousins-Blog/Dryer-Lint-Buildup",
+  "/blog-dryer-belt-replacement.html": "/Cousins-Blog/Dryer-Belt-Replacement",
+  "/blog-dishwasher-valve-issues.html": "/Cousins-Blog/Dishwasher-Valve-Issues"
+};
+
+app.use((req, res, next) => {
+  if (req.method === "GET" && legacyRedirects[req.path]) {
+    return res.redirect(301, legacyRedirects[req.path]);
+  }
+  next();
+});
+
+const prettyRoutes = {
+  "/Services": "services.html",
+  "/Services/": "services.html",
+  "/Cousins-Blog": "blog.html",
+  "/Cousins-Blog/": "blog.html",
+  "/Cousins-Blog/Washer-Not-Draining": "blog-washer-not-draining.html",
+  "/Cousins-Blog/Refrigerator-Repair-Signs": "blog-refrigerator-repair-signs.html",
+  "/Cousins-Blog/Dryer-Not-Heating": "blog-dryer-not-heating.html",
+  "/Cousins-Blog/Oven-Glass-Cleaning": "blog-dishwasher-not-cleaning.html",
+  "/Cousins-Blog/Prepare-Repair-Visit": "blog-prepare-repair-visit.html",
+  "/Cousins-Blog/Dryer-Lint-Buildup": "blog-dryer-lint-buildup.html",
+  "/Cousins-Blog/Dryer-Belt-Replacement": "blog-dryer-belt-replacement.html",
+  "/Cousins-Blog/Dishwasher-Valve-Issues": "blog-dishwasher-valve-issues.html",
+  "/About-Us": "index.html",
+  "/Past-Work": "index.html",
+  "/Reviews": "index.html",
+  "/Contact": "index.html"
+};
+
+Object.entries(prettyRoutes).forEach(([route, file]) => {
+  app.get(route, (_req, res) => res.sendFile(path.join(siteRoot, file)));
+});
+
 // Serve the static website from the project root when the backend runs.
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(siteRoot));
 
 const client = process.env.OPENAI_API_KEY
   ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -76,10 +122,10 @@ Business facts:
 - Business name: Cousins Appliance Repair.
 - Phone: (414) 405-7621.
 - Cousins Appliance Repair is a mobile appliance repair service based in Wisconsin. Main service area: the Greater Milwaukee Area.
-- Service area examples include Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.
+- Service area examples include Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Grafton, Port Washington, Cedarburg, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.
 - Services: washer repair, dryer repair including gas and electric, refrigerator repair, dishwasher repair, oven repair, and stove/range repair.
 - Metin is the founder. The technicians are certified and licensed.
-- Customers can book through the Setmore booking popup on the website.
+- Customers can book through the Setmore booking popup on the website. Because booking volume can get high, explain that a technician will call or reach out after booking to confirm details, understand the issue, and make sure the visit is set up correctly.
 
 AI workflow:
 - A local scikit-learn NLP model may classify the customer's message before you answer.
@@ -111,7 +157,7 @@ function ruleBasedIntent(message = "") {
   if (/(price|pricing|cost|fee|charge|estimate|quote|how much|diagnostic)/.test(m)) return "pricing_question";
   if (/(book|appointment|schedule|setmore|calendar|time slot|availability)/.test(m)) return "booking_request";
   if (/(founder|founded|owner|owns|started|runs the company|who runs|who is metin|metin|licensed|licenced|certified|certification|insured|qualified|qualifications|credentials|trained technicians|technicians licensed|techs licensed|repair people trained)/.test(m)) return "business_info_question";
-  if (/(service area|areas do you cover|what areas|where are you located|where are you based|where.*located|where.*business|your address|business address|are you located|located in|based in|near me|what city|what cities|area|serve|cover|coverage|location|located|milwaukee|greenfield|mequon|franklin|oak creek|wauwatosa|west allis|brookfield|shorewood|whitefish bay|glendale|zip)/.test(m)) return "service_area_question";
+  if (/(service area|areas do you cover|what areas|where are you located|where are you based|where.*located|where.*business|your address|business address|are you located|located in|based in|near me|what city|what cities|area|serve|cover|coverage|location|located|milwaukee|greenfield|mequon|franklin|oak creek|grafton|port washington|cedarburg|wauwatosa|west allis|brookfield|shorewood|whitefish bay|glendale|zip)/.test(m)) return "service_area_question";
   if (/(washer|washing machine)/.test(m) && /(drain|empty|standing water|pump|clog)/.test(m)) return "washer_drain_issue";
   if (/(washer|washing machine)/.test(m) && /(leak|puddle|drip|water on floor)/.test(m)) return "washer_leak_issue";
   if (/(dryer)/.test(m) && /(not heating|no heat|cold air|takes forever|not dry|wet clothes|long drying)/.test(m)) return "dryer_no_heat";
@@ -181,7 +227,7 @@ function replyForIntent(intent) {
     case "pricing_question":
       return "There is a $95 diagnostic/service visit fee, and that fee is applied toward the repair if you move forward. The final quote depends on the appliance, issue, parts, and labor. Booking a visit is the best way to get an accurate answer.";
     case "booking_request":
-      return "You can book through the Setmore calendar on this website. Choose your service, pick a time, and leave notes about the appliance issue.";
+      return "You can book through the Setmore calendar on this website. Choose your service, pick a time, and leave notes about the appliance issue. Because booking volume can get high, a technician will call or reach out after booking to confirm the details, understand the issue, and make sure the visit is set up correctly.";
     case "safety_emergency":
       return "For safety, stop using the appliance right away. If there is gas smell, smoke, sparks, flooding, or an electrical hazard, call/text Cousins Appliance Repair or a qualified professional immediately before using it again.";
     case "washer_drain_issue":
@@ -203,7 +249,7 @@ function replyForIntent(intent) {
     case "oven_stove_heating_issue":
       return "This sounds like an oven or stove heating issue. Gas and electric models can involve igniters, burners, switches, sensors, or heating elements. For safety, avoid DIY gas or electrical repairs and book a technician.";
     case "service_area_question":
-      return "Cousins Appliance Repair serves the Greater Milwaukee Area, including Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.";
+      return "Cousins Appliance Repair serves the Greater Milwaukee Area, including Milwaukee, Greenfield, Mequon, Franklin, Oak Creek, Grafton, Port Washington, Cedarburg, Wauwatosa, West Allis, Brookfield, Shorewood, Whitefish Bay, Glendale, and nearby communities depending on availability.";
     case "business_info_question":
       return "Cousins Appliance Repair was founded by Metin. The technicians are certified and licensed. For specific licensing, insurance, or appointment details, call/text (414) 405-7621 or include your question when booking.";
     default:
