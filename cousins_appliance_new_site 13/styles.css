@@ -1126,3 +1126,35 @@ h3 { font-size: 1.35rem; line-height: 1.15; margin-bottom: 10px; }
     grid-template-columns: 1fr;
   }
 }
+
+.reviews-carousel-only .google-reviews-shell,
+.google-reviews-shell.reviews-widget-only {
+  display: block;
+  width: min(1180px, 100%);
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  border-radius: 32px;
+  background: rgba(10, 10, 10, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+}
+
+.reviews-carousel-only .google-reviews-widget {
+  width: 100%;
+  max-width: 100%;
+}
+
+.reviews-carousel-only .google-reviews-widget iframe,
+.reviews-carousel-only .google-reviews-widget > div {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .reviews-carousel-only .google-reviews-shell,
+  .google-reviews-shell.reviews-widget-only {
+    padding: 0.85rem;
+    border-radius: 22px;
+  }
+}
